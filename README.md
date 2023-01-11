@@ -2,6 +2,8 @@
 
 Project aplikasi catatan sederhana yang dibangun dengan RESTful API menggunakan Hapi Framework dalam Kelas Belajar Membuat Aplikasi Back-End untuk Pemula dari Dicoding.
 
+Pengujian Notes API dapat menggunakan berkas Postman Collection dan Environment pada direktori NotesAPITestCollectionAndEnvironment yang tersedia pada branch api-docs ini.
+
 ## Create Note
 
 Membuat catatan yang akan disimpan pada memory server dalam bentuk array JavaScript.

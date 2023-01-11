@@ -107,7 +107,7 @@ const deleteNodeByIdHandler = (request, h) => {
 
     const response = h.response({
       status: 'success',
-      message: 'Catatan berhasi dihapus',
+      message: 'Catatan berhasil dihapus',
     });
     response.code(200);
     return response;

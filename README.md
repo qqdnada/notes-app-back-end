@@ -21,7 +21,7 @@ Membuat catatan yang akan disimpan pada memory server dalam bentuk array JavaScr
 
 **Response**
 
-HTTP/1.1 201 Created
+- HTTP/1.1 201 Created
 ```json
 {
   "status": "success",
@@ -34,11 +34,11 @@ HTTP/1.1 201 Created
 
 **Error Response**
 
-HTTP/1.1 500 Internal Server Error
+- HTTP/1.1 500 Internal Server Error
 ```json
 {
   "status": "error",
-  "message": "Catatan gagal untuk ditambahkan",
+  "message": "Catatan gagal untuk ditambahkan"
 }
 ```
 
@@ -52,11 +52,10 @@ Menampilkan semua catatan yang tersimpan.
 
 **Response**
 
-HTTP/1.1 200 OK
+- HTTP/1.1 200 OK
 ```json
 {
   "status": "success",
-  "message": "Catatan berhasil ditambahkan",
   "data": {
     "notes": [
       {
@@ -80,8 +79,18 @@ HTTP/1.1 200 OK
           "Tag 2"
         ],
         "body": "Konten"
-      },
+      }
     ]
+  }
+}
+```
+
+- HTTP/1.1 200 OK
+```json
+{
+  "status": "success",
+  "data": {
+    "notes": []
   }
 }
 ```
@@ -94,13 +103,18 @@ Menampilkan catatan.
 
 `GET`  `/notes/{id}`
 
+**URL Parameter**
+
+|Parameter  | Description                      |
+|-----------|----------------------------------|
+|id         | The `id` of the note to retrieve |
+
 **Response**
 
-HTTP/1.1 200 OK
+- HTTP/1.1 200 OK
 ```json
 {
   "status": "success",
-  "message": "Catatan berhasil ditambahkan",
   "data": {
     "note": {
       "id": "V09YExygSUYogwWJ",
@@ -112,18 +126,17 @@ HTTP/1.1 200 OK
         "Tag 2"
       ],
       "body": "Konten"
-    },
-     
+    }
   }
 }
 ```
 
 **Error Response**
 
-HTTP/1.1 404 Not Found
+- HTTP/1.1 404 Not Found
 ```json
 {
   "status": "fail",
-  "message": "Catatan tidak ditemukan",
+  "message": "Catatan tidak ditemukan"
 }
 ```
